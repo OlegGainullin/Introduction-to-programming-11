@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+    char *locale = setlocale(LC_ALL, "");
+    int x = 0;
+    int y = 0;
+    int c = 0;
+    int answer = 0;
+    printf("Введите координаты OX: ");
+    scanf("%d", &x);
+    printf("Введите координаты OY: ");
+    scanf("%d", &y);
+    if (x > 0)
+    {
+        if (y > 0)
+        {
+            answer = 1;
+        }
+        else
+        {
+            answer = 4;
+        }
+    }
+    if (x < 0)
+    {
+        if (y > 0)
+        {
+            answer = 2;
+        }
+        else
+        {
+            answer = 3;
+        }
+    }
+    printf("Точка находится в четверти: %d \n", answer);
+    return 0;
+}
